@@ -120,7 +120,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
 PRODUCT_PACKAGES += \
-    libdashplayer \
     libextmedia_jni \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -130,15 +129,11 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libqcmediaplayer \
-    libstagefrighthw \
-    qcmediaplayer
+    libstagefrighthw 
 
 ifneq ($(QCPATH),)
 PRODUCT_PACKAGES += libOmxVdecHevc
 endif
-
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
 
 # Power HAL
 PRODUCT_PACKAGES += \
